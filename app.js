@@ -9,6 +9,8 @@ const path=require("path")
 app.use(cors());
 app.use(express.json());
 app.use('/scheduling/v1/appointments', citasRouter);
+
+/*
 app.use(express.static(__dirname));
 
 const swaggerOptions = {
@@ -19,11 +21,11 @@ const swaggerOptions = {
       version: '1.0.0',
       description: 'Documentación de API para confirmar y cancelar citas',
     },
-   /* servers:[
+     servers:[
       {
         url:"https://bitsbotsservice.azurewebsites.net/"
       }
-    ]*/
+    ]
   },
   apis: ['./routes/*.js'], // Rutas a los archivos que contienen comentarios Swagger
   //apis: [`'${path.join(__dirname,"./routes/*.js")}`],
@@ -34,6 +36,7 @@ const swaggerDocs = swaggerJsdoc(swaggerOptions);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 
+*/
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
