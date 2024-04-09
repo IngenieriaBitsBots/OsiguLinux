@@ -3,8 +3,10 @@ const app = express();
 const swaggerUi = require('swagger-ui-express');
 const swaggerJsdoc = require('swagger-jsdoc');
 const citasRouter = require('./src/routes/citas');
+const cors = require('cors');
 const path=require("path")
 
+app.use(cors());
 app.use(express.json());
 app.use('/scheduling/v1/appointments', citasRouter);
 app.use(express.static(__dirname));
@@ -19,7 +21,7 @@ const swaggerOptions = {
     },
     servers:[
       {
-        url:"http://localhost:3000"
+        url:"https://bitsbotsservice.azurewebsites.net/"
       }
     ]
   },
