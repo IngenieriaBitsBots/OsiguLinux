@@ -10,9 +10,6 @@ async function verificarToken(req, res, next) {
         if (!token || token.toString() !== token_bd[0].token_valido) {
             return res.status(401).send({ error: 'Acceso denegado. Token no válido o ausente.' });
         }
-
-        console.log("pasé")
-
         next();
     } catch (error) {
         console.error('Error al verificar token:', error);
