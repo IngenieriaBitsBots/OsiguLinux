@@ -21,11 +21,11 @@ jobs:
         with:
           node-version: '20.x'
 
-    #  - name: npm install, build, and test
-    #    run: |
-    #      npm install
-    #      npm run build --if-present
-    #      npm run test --if-present
+      - name: npm install, build, and test
+        run: |
+          npm install
+          npm run build --if-present
+          npm run test --if-present
 
       - name: Zip artifact for deployment
         run: zip release.zip ./* -r
@@ -59,4 +59,4 @@ jobs:
           app-name: 'bitsbotsServiceLinux'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_3659A14E65954D1C8FA12ECB0B2D2F2D }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_8372EB5488BD43329F6B87D89D770897 }}
