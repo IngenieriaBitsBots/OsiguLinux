@@ -7,6 +7,7 @@ const path=require("path")
 
 app.use(express.json());
 app.use('/scheduling/v1/appointments', citasRouter);
+app.use(express.static(__dirname));
 
 const swaggerOptions = {
   swaggerDefinition: {
