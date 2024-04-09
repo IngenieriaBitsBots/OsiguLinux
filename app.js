@@ -19,11 +19,11 @@ const swaggerOptions = {
       version: '1.0.0',
       description: 'Documentación de API para confirmar y cancelar citas',
     },
-    servers:[
+   /* servers:[
       {
         url:"https://bitsbotsservice.azurewebsites.net/"
       }
-    ]
+    ]*/
   },
   apis: ['./routes/*.js'], // Rutas a los archivos que contienen comentarios Swagger
   //apis: [`'${path.join(__dirname,"./routes/*.js")}`],
